@@ -33,6 +33,16 @@
           thumb: 'http://placehold.it/100x100',
         },
       ],
+      reviews: [
+        {
+          stars: 5,
+          body: 'http://placehold.it/100x100',
+        },
+        {
+          full: 'http://placehold.it/200x200',
+          thumb: 'http://placehold.it/100x100',
+        },
+      ],
     },
     {
       name: 'Deez Nut2',
