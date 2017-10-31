@@ -2,6 +2,7 @@
 <html ng-app="store">
 <head>
     <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body ng-controller="StoreController as store">
 <ul class="list-group">
@@ -41,23 +42,25 @@
                 </blockquote>
                 <form name="reviewForm"
                       ng-controller="ReviewController as reviewCtrl"
-                      ng-submit="reviewCtrl.addReview(product)"
+                      ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)"
+                      novalidate
                 >
                     <blockquote>
                         <b>stars: {{reviewCtrl.review.stars}}</b>
                         {{reviewCtrl.review.body}}
                         <cite>by: {{reviewCtrl.review.author}}</cite>
                     </blockquote>
-                    <select ng-model="reviewCtrl.review.stars">
+                    <select ng-model="reviewCtrl.review.stars" required>
                         <option value="1">1 star</option>
                         <option value="2">2 star</option>
                         <option value="3">3 star</option>
                         <option value="4">4 star</option>
                         <option value="5">5 star</option>
                     </select>
-                    <textarea ng-model="reviewCtrl.review.body"></textarea>
+                    <textarea ng-model="reviewCtrl.review.body" required></textarea>
                     <label>by:</label>
-                    <input type="email" ng-model="reviewCtrl.review.author"/>
+                    <input type="email" ng-model="reviewCtrl.review.author" required/>
+                    <div>reviewForm is {{reviewForm.$valid}}</div>
                     <input type="submit" value="Submit">
                 </form>
             </div>
