@@ -36,11 +36,13 @@
       reviews: [
         {
           stars: 5,
-          body: 'http://placehold.it/100x100',
+          body: 'hfdsafsadfdsa00',
+          author: 'dees@nutz.com',
         },
         {
-          full: 'http://placehold.it/200x200',
-          thumb: 'http://placehold.it/100x100',
+          stars: 1,
+          body: 'hfdsafsadfdsa00',
+          author: 'dees@nutz.com',
         },
       ],
     },
@@ -58,6 +60,18 @@
         {
           full: 'http://placehold.it/200x200',
           thumb: 'http://placehold.it/100x100',
+        },
+      ],
+      reviews: [
+        {
+          stars: 5,
+          body: 'hfdsafsadfdsa00',
+          author: 'dees@nutz.com',
+        },
+        {
+          stars: 1,
+          body: 'hfdsafsadfdsa00',
+          author: 'dees@nutz.com',
         },
       ],
     },
